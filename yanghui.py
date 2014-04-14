@@ -22,5 +22,4 @@ for i in range(1,total):
     l = temp
     temp = map(str, temp)
     s = ' '.join(temp)
-    lon = len(s)/2
     print s 
