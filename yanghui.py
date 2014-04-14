@@ -3,12 +3,15 @@
 '''
 杨辉三角
 '''
-total = int(raw_input('input a number: '))
+total = int(raw_input('input a number: ')) - 1
 
-if( total > 2):
+if( total > 0):
     print '1' 
-l = [1]
-for i in range(0,total):
+    print '1 1'
+else:
+    exit('请输入大于1的整数')
+l = [1,1]
+for i in range(1,total):
     num = len(l)
     temp=[]
     for j in range(1,num):
@@ -20,6 +23,4 @@ for i in range(0,total):
     temp = map(str, temp)
     s = ' '.join(temp)
     lon = len(s)/2
-#    for j in range(total - lon):
-#        print '  ',
     print s 
